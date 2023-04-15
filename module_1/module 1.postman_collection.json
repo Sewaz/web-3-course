@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "9a543e96-ba36-48ba-9367-c957b543666a",
+		"name": "module 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26898575"
+	},
+	"item": [
+		{
+			"name": "first endpoint (get list of students)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "second endpoint (get token)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nickname\": \"Sewaz\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/students/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "third endpoint (create new student)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuaWNrbmFtZSI6IlNld2F6IiwiaWF0IjoxNjgxNTUxNTAzLCJleHAiOjE2ODE1NjIzMDN9.PQ2cwYO9BvVMpCzRMqoNQnGFFEqcTr6VnW5Z6HArMkY",
+							"type": "text"
+						},
+						{
+							"key": "nickname",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "firstName",
+							"value": "AV",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "AD",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
